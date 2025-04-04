@@ -1,0 +1,27 @@
+swagger: "2.0"
+info:
+  description: "中文歌词生成 API"
+  version: "1.0.0"
+  title: "GPT2 Lyric Generator"
+basePath: "/api"
+schemes:
+  - http
+paths:
+  /generate:
+    post:
+      summary: "生成歌词"
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          schema:
+            type: object
+            required:
+              - text
+            properties:
+              text:
+                type: string
+      responses:
+        200:
+          description: "生成结果"
