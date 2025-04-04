@@ -19,4 +19,4 @@ GPT2LMHeadModel.from_pretrained(model_id);"
 
 EXPOSE 9001
 
-CMD ["gunicorn", "app:app", "-c", "gunicorn.conf.py"]
+CMD ["gunicorn", "app:create_app()", "-c", "gunicorn.conf.py"]
